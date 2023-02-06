@@ -10,8 +10,8 @@
           <th scope="col">#</th>
           <th scope="col">Common name</th>
           <th scope="col">Scientific name</th>
-          <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
+          <th scope="col">Editar</th>
         </tr>
       </thead>
 
@@ -21,13 +21,13 @@
           <td>{{ item.commonName }}</td>
           <td>{{ item.scientificName }}</td>
           <td>
-            <a class="button" (click)="edit(item.id)">
-              <span class="material-symbols-outlined"> edit </span>
+            <a class="button" (click)="delete(item.id)">
+              <span class="material-symbols-outlined"> delete </span>
             </a>
           </td>
           <td>
-            <a class="button" (click)="delete(item.id)">
-              <span class="material-symbols-outlined"> delete </span>
+            <a class="button" (click)="edit(item.id)">
+              <span class="material-symbols-outlined"> edit </span>
             </a>
           </td>
         </tr>
