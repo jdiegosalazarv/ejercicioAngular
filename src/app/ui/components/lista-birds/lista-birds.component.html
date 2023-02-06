@@ -8,17 +8,16 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Common name</th>
           <th scope="col">Scientific name</th>
           <th scope="col">Editar</th>
           <th scope="col">Eliminar</th>
+          <th scope="col">Common name</th>
         </tr>
       </thead>
 
       <tbody *ngFor="let item of lista">
         <tr>
           <th scope="row">{{ item.id }}</th>
-          <td>{{ item.commonName }}</td>
           <td>{{ item.scientificName }}</td>
           <td>
             <a class="button" (click)="edit(item.id)">
@@ -30,6 +29,7 @@
               <span class="material-symbols-outlined"> delete </span>
             </a>
           </td>
+          <td>{{ item.commonName }}</td>
         </tr>
       </tbody>
     </table>
