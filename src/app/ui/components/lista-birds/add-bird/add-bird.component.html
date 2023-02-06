@@ -1,0 +1,12 @@
+<form>
+  <div class="mb-3">
+    <label for="commonName" class="form-label" >Nombre común</label>
+    <input type="text" class="form-control" id="commonName" name="commonName" [(ngModel)]="name">
+  </div>
+  <div class="mb-3">
+    <label for="cientificName" class="form-label">Nombre cientifico</label>
+    <input type="text" class="form-control" id="cientificName" name="cientificName" [(ngModel)]="cName">
+  </div>
+  <button *ngIf="activo" type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+  <button *ngIf="!activo" type="button" class="btn btn-primary" (click)="editBird()">Actualizar</button>
+</form>

@@ -1,0 +1,8 @@
+<form>
+  <div class="mb-3">
+    <label for="commonName" class="form-label" >Nombre</label>
+    <input type="text" class="form-control" id="commonName" name="commonName" [(ngModel)]="name">
+  </div>
+  <button *ngIf="activo" type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+  <button *ngIf="!activo" type="button" class="btn btn-primary" (click)="editCountry()">Actualizar</button>
+</form>

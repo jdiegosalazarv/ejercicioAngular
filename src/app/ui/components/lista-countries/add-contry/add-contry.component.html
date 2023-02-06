@@ -1,0 +1,12 @@
+<form>
+  <div class="mb-3">
+    <label for="counrtyName" class="form-label" >Nombre</label>
+    <input type="text" class="form-control" id="counrtyName" name="counrtyName" [(ngModel)]="name">
+  </div>
+  <div class="mb-3">
+    <label for="zoneId" class="form-label" >Id de la zona</label>
+    <input type="number" class="form-control" id="zoneId" name="zoneId" [(ngModel)]="zoneId">
+  </div>
+  <button *ngIf="activo" type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+  <button *ngIf="!activo" type="button" class="btn btn-primary" (click)="editCountry()">Actualizar</button>
+</form>

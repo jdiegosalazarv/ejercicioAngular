@@ -1,0 +1,40 @@
+<div class="container" [ngSwitch]="option">
+
+  <div *ngSwitchCase="false">
+    <div>
+      <button class='btn btn-primary' (click)="agregar()">Agregar</button>
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Zona</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of lista">
+        <tr>
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.zoneName }}</td>
+          <td>
+            <a class="button" (click)="edit(item.id)">
+              <span class="material-symbols-outlined"> edit </span>
+            </a>
+          </td>
+          <td>
+            <a class="button" (click)="delete(item.id)">
+              <span class="material-symbols-outlined"> delete </span>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngSwitchCase="true">
+    <app-add-zone (option)="setOption($event)" [zone]="currentZone"></app-add-zone>
+  </div>
+
+</div>
+
+
